@@ -1,0 +1,39 @@
+{
+  "name": "homie",
+  "version": "1.0.0",
+  "description": "WhatsApp travel guide bot for Algarve activities",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "broadcast:forecast": "tsx src/cli/broadcast.ts forecast",
+    "broadcast:checkin": "tsx src/cli/broadcast.ts checkin",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "whatsapp",
+    "travel",
+    "algarve",
+    "bot",
+    "guide"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.88.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.5",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
