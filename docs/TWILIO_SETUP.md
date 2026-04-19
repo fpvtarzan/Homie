@@ -73,8 +73,8 @@ Edit `/Users/antonlilljegren/Documents/Drone/Homie/.env`:
 
 ```bash
 # From Twilio Console Dashboard
-TWILIO_ACCOUNT_SID=AC1234567890abcdef1234567890abcdef
-TWILIO_AUTH_TOKEN=your_auth_token_here
+TWILIO_ACCOUNT_SID=YOUR_TWILIO_ACCOUNT_SID
+TWILIO_AUTH_TOKEN=YOUR_TWILIO_AUTH_TOKEN
 
 # From Twilio Sandbox (include "whatsapp:" prefix)
 TWILIO_PHONE_NUMBER=whatsapp:+14155238886
