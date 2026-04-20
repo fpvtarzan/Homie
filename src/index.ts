@@ -1,12 +1,14 @@
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 import webhookRouter from './routes/webhook';
+import { SchedulerService } from './services/scheduler';
 
 // Load environment variables
 dotenv.config();
 
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
+const scheduler = new SchedulerService();
 
 // Middleware
 app.use(express.json());
@@ -54,6 +56,9 @@ app.listen(PORT, () => {
   console.log(`🔗 Webhook: http://localhost:${PORT}/webhook`);
   console.log(`🏥 Health: http://localhost:${PORT}/health`);
   console.log(`\nEnvironment: ${process.env.NODE_ENV || 'development'}\n`);
+
+  // Start scheduler for broadcasts
+  scheduler.start();
 });
 
 export default app;
